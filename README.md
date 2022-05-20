@@ -1,5 +1,6 @@
 # Travel
-Travel website - design from bedimcode youtube channel
+Travel website - Responsive Website with HTML CSS And JAVASCRIPT
+
 desktop design
 ![_C__Users_soroosh_Desktop_travel_index html](https://user-images.githubusercontent.com/95019708/169573636-ed685215-98d0-465b-aea4-919a3ee3bb3c.png)
 
