@@ -1,13 +1,11 @@
 @media (max-width: 992px) {
-  .footer__container {
-    justify-items: unset;
+  /* @@@@@@@@@@@@@@@ video @@@@@@@@@@@@@@@ */
+  .video__container {
+    grid-template-columns: 0.7fr;
   }
 }
 
-@media (max-width: 768px) {
-  .section {
-    padding-top: 4rem;
-  }
+@media (max-width: 767px) {
   /* @@@@@@@@@@@@@@@ header @@@@@@@@@@@@@@@ */
   .nav__toggle,
   .nav__close {
@@ -24,7 +22,7 @@
     height: 100%;
     width: 70%;
     background-color: var(--bg-color);
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 2px hsl(190, 54%, 10%);
     padding: var(--header-height) 3rem 3rem;
     transition: 0.4s;
   }
@@ -39,11 +37,10 @@
 
   .nav__close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1.5rem;
+    right: 1.5rem;
   }
 
-  /* @@@@@@@@@@@@@@@ JS class for header @@@@@@@@@@@@@@@ */
   .show-menu {
     right: 0;
   }
@@ -79,7 +76,7 @@
 
   /* @@@@@@@@@@@@@@@ discover @@@@@@@@@@@@@@@ */
   .swiper {
-    width: unset;
+    max-width: 576px;
   }
 
   .discover__overflow {
@@ -88,38 +85,54 @@
 
   /* @@@@@@@@@@@@@@@ experience @@@@@@@@@@@@@@@ */
   .experience__content {
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .experience__img-overflow:nth-child(1) {
-    width: 270px;
-    margin-right: 2rem;
+    width: 380px;
+    margin-right: 3rem;
   }
 
   .experience__img-overflow:nth-child(2) {
-    width: 120px;
-    top: 2rem;
-    right: 0;
+    width: 170px;
+    top: 3rem;
   }
 
   /* @@@@@@@@@@@@@@@ place @@@@@@@@@@@@@@@ */
-  .place__overflow,
-  .place__img {
-    height: 240px;
-  }
 
   .place__container {
-    gap: 1.5rem;
+    gap: 2rem 1.5rem;
+  }
+
+  .place__overflow,
+  .place__img {
+    height: 230px;
   }
 
   /* @@@@@@@@@@@@@@@ subscribe @@@@@@@@@@@@@@@ */
   .subscribe {
-    margin: 5rem 0 2rem;
     background-color: hsl(190, 54%, 15%);
   }
 
   .subscribe__container {
     grid-template-columns: 0.8fr;
+  }
+
+  /* @@@@@@@@@@@@@@@ sponsor @@@@@@@@@@@@@@@ */
+  .sponsor__container {
+    grid-template-columns: repeat(3, max-content);
+    row-gap: 3rem;
+  }
+
+  .sponsor__logo {
+    width: 80px;
+  }
+
+  /* @@@@@@@@@@@@@@@ footer @@@@@@@@@@@@@@@ */
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: initial;
+    gap: 2.5rem;
   }
 
   .footer__rights {
@@ -130,16 +143,32 @@
 }
 
 @media (max-width: 576px) {
+  .section {
+    padding: 4rem 0 2rem;
+  }
+  /* @@@@@@@@@@@@@@@ experience @@@@@@@@@@@@@@@ */
+  .experience__content {
+    gap: 1.5rem;
+  }
+
+  .experience__img-overflow:nth-child(1) {
+    width: 280px;
+  }
+
+  .experience__img-overflow:nth-child(2) {
+    width: 120px;
+  }
+
   /* @@@@@@@@@@@@@@@ video @@@@@@@@@@@@@@@ */
   .video__container {
     grid-template-columns: 1fr;
   }
 
-  /* @@@@@@@@@@@@@@@ place @@@@@@@@@@@@@@@ */
-  .place__overflow,
-  .place__img {
-    height: 230px;
+  .video__button {
+    padding: 0.5rem 1rem;
   }
+
+  /* @@@@@@@@@@@@@@@ place @@@@@@@@@@@@@@@ */
 
   .place__container {
     grid-template-columns: repeat(2, max-content);
@@ -148,5 +177,105 @@
   /* @@@@@@@@@@@@@@@ subscribe @@@@@@@@@@@@@@@ */
   .subscribe__container {
     grid-template-columns: 1fr;
+  }
+
+  .subscribe .btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 374px) {
+  /* @@@@@@@@@@@@@@@ home @@@@@@@@@@@@@@@ */
+
+  .home__container {
+    padding-bottom: 2rem;
+  }
+
+  .home__subtitle {
+    margin-bottom: var(--mb-1);
+  }
+
+  .home__title {
+    margin-bottom: var(--mb-3);
+  }
+
+  .home__social {
+    gap: 1rem;
+  }
+
+  .home__social-icon {
+    font-size: 1.3rem;
+  }
+
+  .home__corner {
+    bottom: 2rem;
+    padding: 1rem 0.7rem;
+  }
+
+  .home__corner-title {
+    font-size: 0.8rem;
+    margin-bottom: var(--mb-1);
+  }
+
+  .home__corner-btn {
+    font-size: 0.8rem;
+  }
+
+  .home__corner-img {
+    width: 90px;
+  }
+
+  /* @@@@@@@@@@@@@@@ experience @@@@@@@@@@@@@@@ */
+
+  .experience__img-overflow:nth-child(1) {
+    width: 240px;
+    margin-right: 2rem;
+  }
+
+  .experience__img-overflow:nth-child(2) {
+    width: 100px;
+  }
+
+  /* @@@@@@@@@@@@@@@ place @@@@@@@@@@@@@@@ */
+
+  .place__container {
+    gap: 1.5rem 1rem;
+  }
+
+  .place__overflow,
+  .place__img {
+    height: 200px;
+  }
+
+  .place__button {
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* @@@@@@@@@@@@@@@ sponsor @@@@@@@@@@@@@@@ */
+
+  .sponsor__logo {
+    width: 70px;
+  }
+
+  /* @@@@@@@@@@@@@@@ footer @@@@@@@@@@@@@@@ */
+
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ @@@@@@@@@@@@@@@@ 2K & 4K DISPLAYS @@@@@@@@@@@@@@@@@@@@
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+@media (min-width: 2048px) {
+  body {
+    zoom: 1.5;
+  }
+}
+
+@media (min-width: 3840px) {
+  body {
+    zoom: 2;
   }
 }
