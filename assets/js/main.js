@@ -1,3 +1,12 @@
+//  @@@@@@@@@@@@@@@@@@ PRELOADER @@@@@@@@@@@@@@@@@@
+onload = () => {
+  const preloader = document.getElementById('preloader');
+
+  setTimeout(() => {
+    preloader.style.display = 'none';
+  }, 3000);
+};
+
 // @@@@@@@@@@@@@@@@@ show & remove menu @@@@@@@@@@@@@@@@@@@
 const navtoggle = document.getElementById('nav-toggle'),
   navClose = document.getElementById('nav-close'),
@@ -23,45 +32,21 @@ function linkActive() {
 }
 
 // @@@@@@@@@@@@@@@@@ CHANGE BACKGROUND HEADER  @@@@@@@@@@@@@@@@@@@
-//  When the scroll is greater than 100 viewport height,
+//  When the scroll is greater than 50 viewport height,
 //  add the scroll-header class to the header tag
 const header = document.getElementById('header');
 window.addEventListener('scroll', scrollHeader);
 
 function scrollHeader() {
-  if (this.scrollY >= 100) {
+  if (this.scrollY >= 50) {
     header.classList.add('scroll-header');
   } else {
     header.classList.remove('scroll-header');
   }
 }
 
-// @@@@@@@@@@@@@@@@@ SCROLL SECTIONS ACTIVE LINK @@@@@@@@@@@@@@@@@@@
-
-const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', scrollActive);
-
-function scrollActive() {
-  const scrollY = window.pageYOffset;
-
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute('id');
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector('.nav__menu a[href*=' + sectionId + ']')
-        .classList.add('active');
-    } else {
-      document
-        .querySelector('.nav__menu a[href*=' + sectionId + ']')
-        .classList.remove('active');
-    }
-  });
-}
-
 // @@@@@@@@@@@@@@@ swiperjs.com (Effect coverflow) @@@@@@@@@@@@@@@@@
+
 var swiper = new Swiper('.swiper', {
   effect: 'coverflow',
   grabCursor: true,
@@ -83,6 +68,7 @@ var swiper = new Swiper('.swiper', {
 });
 
 // @@@@@@@@@@@@@@@@@@@ video @@@@@@@@@@@@@@@@@@@@
+
 const videoFile = document.getElementById('video-file'),
   videoButton = document.getElementById('video-button'),
   videoIcon = document.getElementById('video-icon');
