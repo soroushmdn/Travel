@@ -553,6 +553,10 @@ button {
   color: var(--text-color);
 }
 
+.subscribe__input::placeholder {
+  color: var(--text-color);
+}
+
 /* @@@@@@@@@@@@@@@ sponsor @@@@@@@@@@@@@@@ */
 .sponsor__container {
   display: grid;
@@ -703,12 +707,12 @@ button {
 
 @keyframes preloader {
   0% {
-    transform: translateX(25px);
+    transform: translateX(15px);
   }
   50% {
-    transform: translateX(0);
+    transform: translateX(-15px);
   }
   100% {
-    transform: translateX(25px);
+    transform: translateX(15px);
   }
 }
